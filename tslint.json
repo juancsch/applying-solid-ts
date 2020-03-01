@@ -1,0 +1,13 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint-config-standard"],
+    "rules": {
+      "ter-indent": [true, "tab"],
+      "semicolon": [true, "never"],
+      "object-curly-spacing": ["error", "never"]
+    },
+    "rulesDirectory": [],
+    "linterOptions": {
+      "exclude": ["lib", "node_modules"]
+    }
+}
