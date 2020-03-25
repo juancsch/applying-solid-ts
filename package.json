@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
-    "ts": "ts-node",
+    "cli": "ts-node src/cli.ts",
     "lint": "tslint -p .",
     "compile": "npm run clean && tsc -p .",
     "clean": "rm -rf lib"

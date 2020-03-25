@@ -1,8 +1,10 @@
-import input from './input-from-file'
-import { outputTo } from './output-from-file'
-import WordCounter from './word-counter'
+import input from './app/input/input-from-file'
+import { outputTo } from './app/output/output-from-file'
+import WordCounter from './app/domain/word-counter'
 
-main(process.argv[2])
+const arg1 = process.argv[2]
+
+main(arg1)
 
 async function main (filepath: string): Promise<void> {
 	try {

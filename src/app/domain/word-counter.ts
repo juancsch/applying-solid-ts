@@ -1,5 +1,3 @@
-export type Input = (filepath: string) => Promise<string>
-export type Output = (content: { wordCount: number }) => Promise<void>
 
 export default (input: Input, output: Output) => async (location: string) => {
 	const data = await input(location)
