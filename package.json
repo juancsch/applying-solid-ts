@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "scripts": {
+    "server": "ts-node src/server.ts",
     "cli": "ts-node src/cli.ts",
     "lint": "tslint -p .",
     "compile": "npm run clean && tsc -p .",
