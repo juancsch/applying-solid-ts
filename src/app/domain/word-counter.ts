@@ -1,11 +1,27 @@
 
-export default (input: Input, output: Output) => async (location: string) => {
-	const data = await input(location)
+export interface Input {
+	(location: string): Promise<string>
+}
 
-	const wordCount = data.split(/\s/).length
-	const wordCountJSON = {
-		wordCount
+type ReportCounted = {
+	wordCount: number
+}
+
+export interface Output {
+	(content: ReportCounted): Promise<void>
+}
+
+export function WordCounter (input: Input, output: Output) {
+
+	return async (location: string) => {
+
+		const data = await input(location)
+
+		const wordCount = data.split(/\s/).length
+		const wordCountJSON = {
+			wordCount
+		}
+
+		return output(wordCountJSON)
 	}
-
-	await output(wordCountJSON)
 }

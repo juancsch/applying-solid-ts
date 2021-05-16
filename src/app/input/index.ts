@@ -6,11 +6,11 @@ const strategies = {
 	http
 }
 
-export const input: Input = (location) => {
+export async function input (location: string) {
 
-	if (location.startsWith('http')) {
-		return strategies['http'](location)
+	if (location.includes('http')) {
+		return strategies.http(location)
 	}
 
-	return strategies['file'](location)
+	return strategies.file(location)
 }

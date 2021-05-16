@@ -1,21 +1,19 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ES6",
     "module": "commonjs",
-    "sourceMap": true,
-    "outDir": "lib",
-    "rootDir": "src",
+    "sourceMap": false,
+    "outDir": "build",
+    "rootDir": ".",
     "removeComments": true,
     "strict": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "lib": [ "ES2015" ]
+
   },
-  "include": [
-    "src/**/*.ts"
-  ],
   "exclude": [
-    "node_modules",
-    "test/**/*.spec.ts"
+    "node_modules"
   ]
 }
